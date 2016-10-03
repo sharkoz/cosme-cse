@@ -117,7 +117,7 @@ app.directive("navigPages", function() {
     restrict: "EA",
     template: "<ul class='ais-pagination' ng-if='helper.content.nbPages>1'>" +
               "  <li class='ais-pagination--item ais-pagination--item__previous' ng-if='helper.content.page!=0'>" +
-              "    <a aria-label='Previous' href='#' class='ais-pagination--link' ng-click='helper.setPage(helper.content.page-1).search();'>Show previous</a>" +
+              "    <a aria-label='Previous' href='#head' class='ais-pagination--link' ng-click='helper.setPage(helper.content.page-1).search();'>Show previous</a>" +
               "  </li>" +
               "  <li class='ais-pagination--item ais-pagination--item__next' ng-if='helper.content.page<helper.content.nbPages-1'>" +
               "    <a aria-label='Next' href='#head' class='ais-pagination--link' ng-click='helper.setPage(helper.content.page+1).search();'>Show more</a>" +
