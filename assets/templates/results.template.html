@@ -1,0 +1,10 @@
+<div class="hit panel" ng-repeat="hit in helper.content.hits">
+  <div class="hit restaurant">
+    <div class="restaurant-object" ng-style="{'background-image': 'url({{hit.image_url}})'}"></div>
+    <div class="restaurant-body">
+      <h4 class="restaurant-heading">{{hit.name}}</h4>
+      <div class="restaurant-stars">{{hit.stars_count}}<star-display ng-model="hit.stars_count" max="5"></star-display><span class="restaurant-reviews">({{hit.reviews_count}} reviews)</span></div>
+      <p class="restaurant-details">{{hit.food_type}} | {{hit.neighborhood}} | {{hit.price_range}}</p>
+    </div>
+  </div>
+</div>

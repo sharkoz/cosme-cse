@@ -1,0 +1,39 @@
+.average-rating-container {
+  position:relative;
+  overflow:hidden;
+  display: inline-block;
+  margin: 0 5px;
+  
+  .background,
+  .foreground {
+    overflow:hidden;
+    white-space: nowrap;
+  }
+  .foreground {
+    position: absolute;
+    top:0;
+    left:0;
+  }
+
+  .rating {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    
+    span {
+      padding: 1px;
+      display: inline-block;
+    }
+    .fa-star {
+      background-image: url("../../resources/graphics/stars-plain.png");
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+      &.empty {
+        background-image: url("../../resources/graphics/star-empty.png"); 
+      }
+    }
+  }
+}
+
+

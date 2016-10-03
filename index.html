@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Cool places to eat !</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+  
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+</head>
+
+<body ng-app="searchApp">
+  <div class="welcome-container" ng-controller="searchController" ng-cloak>
+    <header name="head">
+      <div id="search-box">
+        <search-box helper="helper" placeholder="Search for Restaurants by Name, Cuisine, Location..."></search-box>
+      </div>
+    </header>
+    <div class="results-container">
+      <aside>
+        <div id="categories">
+          <refinement-list helper="helper" facet="food_type" name="Cuisine / FoodType"></refinement-list>
+        </div>
+        <div id="stars">
+          <star-rating helper="helper" facet="stars_facet" name="Rating" max="5"></star-rating>
+        </div>
+      </aside>
+      <article>
+        <div class="stats">
+          <div id="stats-container">
+            <stats helper="helper"></stats>
+          </div>
+          <div class="stats-filler">
+            <div class="nb-results results_filler"></div>
+          </div>
+        </div>
+        <div id="hits-container">
+          <hits helper="helper"></hits>
+        </div>
+        <div id="pagination-container">
+          <navig-pages helper="helper"></navig-pages>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
+  <!--<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.14.0/algoliasearch.helper.min.js"></script>
+  <script src="assets/js/main-angular.js"></script>
+  <script src="assets/js/algoliasearch.directives.js"></script>
+</body>
+
+</html>

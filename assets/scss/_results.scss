@@ -1,0 +1,129 @@
+$small: "(max-width: 700px)";
+
+.results-container {
+  width:100%;
+  background-color: white;
+  display: flex;
+  box-shadow: -5px 5px 5px lightgrey;
+  margin-bottom : 10px;
+  article {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    .stats{
+      display: flex;
+      flex-direction: row;
+      
+      .stats-filler{
+        display:flex;
+        flex-grow:1;
+      }
+      
+      .nb-results { 
+        @extend .sub-title;
+        .ais-stats--time {
+          font-weight: 400;
+          font-size: normal;
+        }
+      }
+      
+      .results_filler{
+        border-bottom: 1px #e6e6e6 solid;
+        display:flex;
+        flex-grow:1; 
+        margin-left: 20px;
+      }
+    } 
+
+    #hits-container {
+      .restaurant {
+        display: flex;
+        flex-direction: row;
+
+        @media #{$small} {
+            /* On small screens, we are no longer using row direction but column */
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        
+        padding: 10px 0;
+
+        .restaurant-object {
+          height: 100px;
+          min-height: 100px;
+          width: 100px;
+          min-width: 100px;
+          overflow: hidden;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center; 
+          border-radius: 5px;
+          margin-right: 20px;
+          @media #{$small} {
+            /* On small screens, we center the image */
+            margin: auto;
+            height: 175px;
+            width: 175px;
+          }
+        }
+        
+        .restaurant-body {
+          padding-left: 0px;
+          display:flex;
+          flex-direction: column;
+
+          h4.restaurant-heading { 
+            color: #000;
+            font-weight: 600; 
+            font-size: larger;
+            margin: 0;
+            letter-spacing: 0px;
+            flex-grow: 1;
+          }
+          .restaurant-stars{
+            color: #fbae00;
+            display: flex;
+            flex-grow: 1;
+            .restaurant-stars-display{
+              font-size: 0;
+            }
+            .restaurant-reviews {
+              margin: 0;
+              color: #c2c2c2;
+            }
+          }
+          p.restaurant-details {
+            flex-grow: 1;
+            margin: 0;
+            color: #b0b0b0;
+          }
+        } 
+        
+      }
+    }
+    .ais-pagination{
+      display: flex;
+      padding: 0px;
+      li{
+        margin: auto;
+        list-style: none;
+        a{
+          text-decoration: none;
+          color: #7f7f7f;
+          text-align: center;
+          padding: 5px 30px; 
+          border: 1px #e6e6e6 solid;
+          border-radius: 4px;
+          display: flex;
+        }
+      }
+      .pag_hidden {
+        width: 0;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
